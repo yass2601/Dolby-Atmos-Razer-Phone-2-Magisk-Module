@@ -1,4 +1,7 @@
-# Dolby Atmos Razer 2 Ryuki Mod
+# Dolby Atmos Razer 2 Ryuki Mod Magisk Module
+
+## Descriptions
+An EQ ported from Razer Phone 2 (bolt)
 
 ## Requirements
 - Android 9, 10, or 11 devices
