@@ -5,6 +5,7 @@ An EQ ported from Razer Phone 2 (bolt)
 
 ## Requirements
 - Android 9, 10, or 11 devices
+- Magisk installed
 
 ## Optional
 - AML 4.0 supported
