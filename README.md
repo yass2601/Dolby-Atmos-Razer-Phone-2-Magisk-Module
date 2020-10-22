@@ -11,10 +11,10 @@ An EQ ported from Razer Phone 2 (bolt)
 ## Optional
 - AML 4.0 supported
 - ACDB supported (Android 9 and 10 only for now)
-- [Audio Compatibility Patch Ryuki Mod](https://github.com/reiryuki/Audio-Compatibility-Patch-Ryuki-Mod)
+- Use Audio Compatibility Patch if you encounter processing problem
 
 ## Troubleshooting
-- If you encounter force close, just reinstall again.
+- If Dolby force close, just reinstall again.
 - Make sure manifest.xml is patched correctly.
 
 
