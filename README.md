@@ -8,6 +8,12 @@ An EQ ported from Razer Phone 2 (bolt)
 - Magisk installed
 - Don't use with another Dolby module!
 
+## Installation Guide
+- Remove another Dolby module
+- Reboot
+- Install via Magisk Manager only
+- Reboot
+
 ## Optional
 - AML 4.0 supported
 - ACDB supported (Android 9 and 10 only for now)
