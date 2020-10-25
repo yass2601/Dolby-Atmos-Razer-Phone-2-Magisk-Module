@@ -1,4 +1,4 @@
-# Dolby Atmos Razer 2 Ryuki Mod Magisk Module
+# Dolby Atmos Razer Phone 2 Magisk Module
 
 ## Descriptions
 An EQ ported from Razer Phone 2 (bolt)
