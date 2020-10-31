@@ -1,10 +1,11 @@
 # Dolby Atmos Razer Phone 2 Magisk Module
 
 ## Descriptions
-An EQ ported from Razer Phone 2 (bolt)
+- An EQ ported from Razer Phone 2 (bolt)
+- APKs compiled by @guitardedhero
 
 ## Requirements
-- Android 9, 10, or 11 devices
+- Android 9, 10, or 11 64 bit devices
 - Magisk installed
 - Don't use with another Dolby module!
 
@@ -16,7 +17,7 @@ An EQ ported from Razer Phone 2 (bolt)
 
 ## Optional
 - AML 4.0 supported
-- ACDB supported (Android 9 and 10 only for now)
+- ACDB supported (Android 10 and bellow only for now)
 - Use Audio Compatibility Patch if you encounter processing problem
 
 ## Troubleshooting
@@ -24,7 +25,8 @@ An EQ ported from Razer Phone 2 (bolt)
 - Make sure manifest.xml is patched correctly.
 
 ## Attention!
-Reporting without proper logs is ignored!
+Reporting without sending logcats and Magisk install logs is ignored!
+https://play.google.com/store/apps/details?id=com.dp.logcatapp
 
 
            - Enjoy the Atmos 🎧 -
