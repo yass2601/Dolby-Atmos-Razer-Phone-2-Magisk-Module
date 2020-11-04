@@ -21,7 +21,8 @@
 ## Troubleshooting
 - If Dolby force close, just reinstall again.
 - Make sure manifest.xml is patched correctly.
-- Use Audio Compatibility Patch if you encounter processing problem
+- Use Audio Compatibility Patch if you encounter processing problem.
+- Bass enhancer boost value is modified. If you don't like it, just rename dax-default.orig_fix to dax-default.xml.
 
 ## Attention!
 - Reporting without sending logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
