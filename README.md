@@ -2,6 +2,8 @@
 
 ## Descriptions
 - An EQ ported from Razer Phone 2 (bolt)
+- Doesn't require signature to be working
+- Doesn't support dynamic partition
 
 ## Requirements
 - Android 9, 10, or 11 64 bit devices
