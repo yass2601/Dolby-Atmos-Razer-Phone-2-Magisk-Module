@@ -15,8 +15,9 @@
 - Reboot
 
 ## Optional
-- AML 4.0 supported
-- ACDB supported (Android 10 and bellow only for now)
+- If you using multiple audio mods (don't use both):
+  - AML 4.0 supported
+  - ACDB supported (Android 10 and bellow only for now)
 
 ## Troubleshooting
 - If Dolby force close, just reinstall again.
@@ -25,7 +26,7 @@
 - Bass enhancer boost value is modified. If you don't like it, just rename dax-default.orig_fix to dax-default.xml.
 
 ## Attention!
-- Reporting without sending logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
+- Reporting without sending full logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
 
 ## Credits
 - APKs compiled by @guitardedhero
