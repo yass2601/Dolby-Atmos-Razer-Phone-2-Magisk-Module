@@ -2,8 +2,8 @@
 
 ## Descriptions
 - An EQ ported from Razer Phone 2 (bolt)
-- Doesn't require signature to be working
 - Doesn't support dynamic partition
+- Spoofing product model/brand/device/manufacturer
 
 ## Requirements
 - Android 9, 10, or 11 64 bit devices
@@ -20,18 +20,18 @@
 - If you using multiple audio mods (don't use both):
   - AML 4.0 supported
   - ACDB supported (Android 10 and bellow only for now)
+- You can rename dax-default to use more bass enhancer boost.
 
 ## Troubleshooting
 - If Dolby force close, just reinstall again.
 - Make sure manifest.xml is patched correctly.
 - Use Audio Compatibility Patch if you encounter processing problem.
-- Bass enhancer boost value is modified. If you don't like it, just rename dax-default.orig_fix to dax-default.xml.
 
 ## Attention!
 - Reporting without sending full logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
 
 ## Credits
-- APKs compiled by @guitardedhero
+- Apks base from @guitardedhero 
 
 
 
