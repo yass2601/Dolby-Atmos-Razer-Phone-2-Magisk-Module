@@ -27,6 +27,8 @@
 - Make sure manifest.xml is patched correctly.
 - Use Audio Compatibility Patch if you encounter processing problem.
 - If you have some issues, like ringtones, alarm tones doesn't work, or calls opposite person doesn't hear, [do this fix.](https://t.me/audioryukimods/543)
+- Fix library not loaded for non standard audio_effects.xml spacing, usually miui, tap [HERE](https://t.me/audioryukimods/593)
+
 
 ## Attention!
 - Reporting without sending full logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
