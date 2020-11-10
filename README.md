@@ -3,7 +3,7 @@
 ## Descriptions
 - An EQ ported from Razer Phone 2 (bolt)
 - Doesn't support dynamic partition
-- Spoofing product model/brand/device/manufacturer
+- Spoofing product model/brand/device/manufacturer, may break some system apps.
 
 ## Requirements
 - Android 9, 10, or 11 64 bit devices
