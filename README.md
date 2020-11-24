@@ -35,9 +35,6 @@
 ## Attention!
 - Reporting without sending full logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
 
-## Credits
-- @guitardedhero for daxService.apk base
-
 
 
 
