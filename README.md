@@ -22,7 +22,7 @@
   - ACDB supported (Android 10 and bellow only for now)
 - You can rename dax-default extension to use more bass enhancer boost. See /data/adb/modules_update/DolbyAtmos/system/vendor/etc/dolby/. Delete /data/vendor/dolby/dax_sqlite3.db if there before reboot.
 
-## Troubleshooting
+## Troubleshootings
 - If installation failed with "I/O error", then you need to disable DM-Verity of your ROM first.
 - If SE policy patch doesn't work for your device, send logcats to dev, then try using force permissive method.
   Run at Terminal Emulator before flash:
