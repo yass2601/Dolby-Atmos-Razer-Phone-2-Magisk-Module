@@ -33,8 +33,10 @@
 - Use Audio Compatibility Patch if you encounter processing problem.
 - If you have some issues, like ringtones, alarm tones doesn't work, or calls opposite person doesn't hear, [do this fix.](https://t.me/audioryukimods/543)
 
-## Attention!
-- Reporting without sending full logcats and Magisk install logs is ignored! https://play.google.com/store/apps/details?id=com.dp.logcatapp
+## Report Guide
+- Send me full logcats using this app https://play.google.com/store/apps/details?id=com.dp.logcatapp
+- Send all "audio_effects" files in system/etc and vendor/etc
+- If you don't do above, it will be closed immediately
 
 ## Telegram
 - https://t.me/audioryukimods
