@@ -28,10 +28,8 @@
   Run at Terminal Emulator before flash:
   - `su`
   - `setprop dolby.force.permissive 1`
-- If Dolby force close, just reinstall again.
+- If Dolby force close, reboot twice.
 - Make sure manifest.xml is patched correctly.
-- Use Audio Compatibility Patch if you encounter processing problem.
-- If you have some issues, like ringtones, alarm tones doesn't work, or calls opposite person doesn't hear, [do this fix.](https://t.me/audioryukimods/543)
 
 ## Report Guide
 - [Tap here](https://t.me/audioryukimods/2618)
