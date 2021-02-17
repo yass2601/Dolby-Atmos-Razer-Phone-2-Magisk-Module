@@ -34,13 +34,11 @@
 - If you have some issues, like ringtones, alarm tones doesn't work, or calls opposite person doesn't hear, [do this fix.](https://t.me/audioryukimods/543)
 
 ## Report Guide
-- Send me full logcats using this app https://play.google.com/store/apps/details?id=com.dp.logcatapp
-- Send all "audio_effects" files in system/etc and vendor/etc
+- [Tap here](https://t.me/audioryukimods/2618)
 - If you don't do above, it will be closed immediately
 
 ## Telegram
 - https://t.me/audioryukimods
-- https://t.me/modsandco
 
 ## Donate
 - https://www.paypal.me/reiryuki
