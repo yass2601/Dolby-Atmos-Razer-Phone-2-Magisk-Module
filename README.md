@@ -11,29 +11,31 @@
 - Magisk installed
 
 ## Installation Guide
-- Remove another Dolby module
+- Remove another Dolby module with different name
 - Reboot
-- Install via Magisk Manager only
-- Reboot
+- Install via Magisk Manager or Recovery
+- See "Optional" section if you using other audio mods
+- Reboot (reboot twice don't reflash, if you have Magisk sepolicy.rule bug)
 
 ## Optional
-- If you using multiple audio mods (don't use both):
-  - AML 4.0 supported
-  - ACDB supported (Android 10 and bellow only for now)
-- You can rename dax-default extension to use more bass enhancer boost. See /data/adb/modules_update/DolbyAtmos/system/vendor/etc/dolby/. Delete /data/vendor/dolby/dax_sqlite3.db if there before reboot.
+- [Tap here](https://t.me/audioryukimods/2616)
 
 ## Troubleshootings
-- If installation failed with "I/O error", then you need to disable DM-Verity of your ROM first.
-- If SE policy patch doesn't work for your device, send logcats to dev, then try using force permissive method.
-  Run at Terminal Emulator before flash:
-  - `su`
-  - `setprop dolby.force.permissive 1`
-- If Dolby force close, reboot twice.
-- Make sure manifest.xml is patched correctly.
+- [Tap here](https://t.me/audioryukimods/2617)
 
 ## Report Guide
 - [Tap here](https://t.me/audioryukimods/2618)
 - If you don't do above, it will be closed immediately
+
+## Credits and contributors
+- @guitardedhero
+- @Foxtrot47
+- @aip_x
+- @aquahol
+- @BanCodrut
+
+## Supports
+- [Tap here](https://t.me/audioryukimods/2619)
 
 ## Telegram
 - https://t.me/audioryukimods
@@ -45,3 +47,4 @@
 
 
            - Enjoy the Atmos 🎧 -
+
