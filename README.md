@@ -9,11 +9,14 @@
 - 64 bit
 - Magisk installed
 
+## Warning!!!
+- Prepare for possibility of bootloop or even brick because this is not a pure Magisk Module
+
 ## Installation Guide
 - Remove another Dolby module with different name
 - Reboot
 - Install via Magisk Manager or Recovery
-- See "Optional" section if you using other audio mods
+- See "Troubleshootings" section if using other audio mods
 - Reboot (reboot twice don't reflash, if you have Magisk sepolicy.rule bug)
 
 ## Optional
@@ -33,10 +36,8 @@
 - @aquahol
 - @BanCodrut
 
-## Thanks for Supports
+## Thanks for Donations
 - https://t.me/audioryukimods/2619
-
-## Donate
 - https://www.paypal.me/reiryuki
 
 
