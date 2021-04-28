@@ -2,7 +2,8 @@
 
 ## Descriptions
 - An EQ ported from Razer Phone 2 (bolt)
-- Spoofing product model/brand/device/manufacturer, may break some platform apps and features
+- Global type soundfx
+- Spoofing ro.product.model/brand/device/manufacturer, may break some platform apps and features
 
 ## Requirements
 - Android 9, 10, or 11
