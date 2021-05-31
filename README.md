@@ -6,7 +6,7 @@
 - Spoofing ro.product.model/brand/device/manufacturer, may break some platform apps and features
 
 ## Requirements
-- Android 9 until 11
+- Android 9 until 12
 - 64 bit architecture
 - Magisk installed
 
