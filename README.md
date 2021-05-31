@@ -43,6 +43,8 @@
 - https://t.me/audioryukimods/2619
 - https://www.paypal.me/reiryuki
 
+## Download
+- Moved link here: https://www.pling.com/p/1531576/
 
 
 
