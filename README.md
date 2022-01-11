@@ -14,15 +14,15 @@
 - Prepare for possibility of bootloop or even brick because this is not a pure Magisk Module
 
 ## Installation Guide
-- Remove another Dolby module with different name
+- Remove any other Dolby module with different name
 - Reboot
 - Install via Magisk Manager or Recovery
 - See "Troubleshootings" section if using other audio mods
 - Reboot (reboot twice don't reflash, if you have Magisk sepolicy.rule bug)
 
 ## Tested on
-- Android 10 arm64 CrDroid ROM
-- Android 11 arm64 DotOS ROM
+- Android 10 CrDroid ROM
+- Android 11 DotOS ROM
 
 ## Optionals
 - https://t.me/androidryukimodsdiscussions/2616
