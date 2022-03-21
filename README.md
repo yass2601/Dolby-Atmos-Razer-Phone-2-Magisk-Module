@@ -33,7 +33,7 @@
 
 ## Bug Report
 - https://t.me/androidryukimodsdiscussions/2618
-- If you don't do above, it will be closed immediately
+- If you don't do above, issues will be closed immediately.
 
 ## Credits and contributors
 - https://t.me/viperatmos
