@@ -5,6 +5,9 @@
 - Global type soundfx
 - Spoofing ro.product.model/brand/device/manufacturer, may break some platform apps and features.
 
+## Screenshots
+- https://t.me/androidryukimodsdiscussions/66464
+
 ## Requirements
 - Android 9 and up
 - 64 bit architecture
