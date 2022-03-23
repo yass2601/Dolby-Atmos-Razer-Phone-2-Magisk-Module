@@ -126,10 +126,10 @@ done
 
 # conflict
 NAME="dolbyatmos
-        DolbyAudio
-        MotoDolby
-        dsplus
-        Dolby"
+      DolbyAudio
+      MotoDolby
+      dsplus
+      Dolby"
 conflict
 NAME=SoundEnhancement
 FILE=/data/adb/modules/$NAME/module.prop
@@ -242,7 +242,22 @@ else
   MAGISKTMP=`find /dev -mindepth 2 -maxdepth 2 -type d -name .magisk`
 fi
 
+# function
+set_read_write() {
+for NAMES in $NAME; do
+  blockdev --setrw $DIR$NAMES
+done
+}
+
 # remount
+DIR=/dev/block/bootdevice/by-name
+NAME="/vendor$SLOT /cust$SLOT /system$SLOT /system_ext$SLOT"
+set_read_write
+DIR=/dev/block/mapper
+set_read_write
+DIR=$MAGISKTMP/block
+NAME="/vendor /system_root /system /system_ext"
+set_read_write
 mount -o rw,remount $MAGISKTMP/mirror/system
 mount -o rw,remount $MAGISKTMP/mirror/system_root
 mount -o rw,remount $MAGISKTMP/mirror/system_ext
