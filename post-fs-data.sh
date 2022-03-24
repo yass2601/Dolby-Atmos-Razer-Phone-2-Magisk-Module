@@ -102,6 +102,7 @@ magiskpolicy "allow     init vendor_configs_file dir relabelfrom"
 magiskpolicy "dontaudit init vendor_configs_file file relabelfrom"
 magiskpolicy "allow     init vendor_configs_file file relabelfrom"
 chcon -R u:object_r:vendor_configs_file:s0 $DIR
+magiskpolicy --live "type vendor_configs_file"
 
 # media codecs
 NAME=media_codecs.xml
@@ -124,6 +125,14 @@ if [ ! -d $DIR ]; then
 fi
 chmod 0770 $DIR
 chown 1013.1013 $DIR
+magiskpolicy "dontaudit vendor_data_file labeledfs filesystem associate"
+magiskpolicy "allow     vendor_data_file labeledfs filesystem associate"
+magiskpolicy "dontaudit init vendor_data_file dir relabelfrom"
+magiskpolicy "allow     init vendor_data_file dir relabelfrom"
+magiskpolicy "dontaudit init vendor_data_file file relabelfrom"
+magiskpolicy "allow     init vendor_data_file file relabelfrom"
+chcon u:object_r:vendor_data_file:s0 $DIR
+magiskpolicy --live "type vendor_data_file"
 
 # cleaning
 FILE=$MODPATH/cleaner.sh
