@@ -150,11 +150,10 @@ NAME=manifest.xml
 M=$ETC/vintf/$NAME
 MODM=$MODETC/vintf/$NAME
 rm -f $MODM
-CHECK=@1.0::IDms/default
-if ! grep -r "$CHECK" $MAGISKTMP/mirror/*/etc/vintf\
-&& ! grep -r "$CHECK" $MAGISKTMP/mirror/*/*/etc/vintf\
-&& ! grep -r "$CHECK" /*/etc/vintf\
-&& ! grep -r "$CHECK" /*/*/etc/vintf; then
+FILE=`find $MAGISKTMP/mirror/*/etc/vintf\
+           $MAGISKTMP/mirror/*/*/etc/vintf\
+           /*/etc/vintf /*/*/etc/vintf -type f -name *.xml`
+if ! grep -A2 vendor.dolby.hardware.dms $FILE | grep 1.0; then
   cp -f $M $MODM
   if [ -f $MODM ]; then
     sed -i '/<manifest/a\

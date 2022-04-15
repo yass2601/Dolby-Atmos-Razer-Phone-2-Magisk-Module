@@ -22,31 +22,6 @@ resetprop ro.product.model "Phone 2"
 resetprop vendor.audio.dolby.ds2.enabled false
 resetprop vendor.audio.dolby.ds2.hardbypass false
 
-# stop
-NAME=dms-hal-2-0
-if getprop | grep "init.svc.$NAME\]: \[running"; then
-  stop $NAME
-fi
-
-# function
-run_service() {
-if getprop | grep "init.svc.$NAME\]: \[stopped"; then
-  start $NAME
-fi
-PID=`pidof $FILE`
-if [ ! "$PID" ]; then
-  $FILE &
-fi
-PID=`pidof $FILE`
-resetprop init.svc.$NAME running
-resetprop init.svc_debug_pid.$NAME "$PID"
-}
-
-# run
-NAME=dms-hal-1-0
-FILE=/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
-run_service
-
 # wait
 sleep 20
 
@@ -81,6 +56,31 @@ fi
 
 # restart
 killall audioserver
+
+# stop
+NAME=dms-hal-2-0
+if getprop | grep "init.svc.$NAME\]: \[running"; then
+  stop $NAME
+fi
+
+# function
+run_service() {
+if getprop | grep "init.svc.$NAME\]: \[stopped"; then
+  start $NAME
+fi
+PID=`pidof $FILE`
+if [ ! "$PID" ]; then
+  $FILE &
+fi
+PID=`pidof $FILE`
+resetprop init.svc.$NAME running
+resetprop init.svc_debug_pid.$NAME "$PID"
+}
+
+# run
+NAME=dms-hal-1-0
+FILE=/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
+run_service
 
 # wait
 sleep 40
