@@ -22,6 +22,35 @@ resetprop ro.product.model "Phone 2"
 resetprop vendor.audio.dolby.ds2.enabled false
 resetprop vendor.audio.dolby.ds2.hardbypass false
 
+# restart
+killall audioserver
+
+# stop
+NAME=dms-hal-2-0
+if getprop | grep "init.svc.$NAME\]: \[running"; then
+  stop $NAME
+fi
+
+# function
+run_service() {
+if getprop | grep "init.svc.$NAME\]: \[stopped"; then
+  start $NAME
+fi
+PID=`pidof $SERV`
+if [ ! "$PID" ]; then
+  $FILE &
+  PID=`pidof $SERV`
+fi
+resetprop init.svc.$NAME running
+resetprop init.svc_debug_pid.$NAME "$PID"
+}
+
+# run
+NAME=dms-hal-1-0
+SERV=vendor.dolby.hardware.dms@1.0-service
+FILE=/vendor/bin/hw/$SERV
+run_service
+
 # wait
 sleep 20
 
@@ -39,6 +68,7 @@ if [ "`realpath /odm/etc`" != /vendor/odm/etc ] && [ "$FILE" ]; then
     umount $j
     mount -o bind $i $j
   done
+  killall audioserver
 fi
 if [ ! -d $AML ] || [ -f $AML/disable ]; then
   DIR=$MODPATH/system
@@ -52,41 +82,29 @@ if [ -d /my_product/etc ] && [ "$FILE" ]; then
     umount /my_product$j
     mount -o bind $i /my_product$j
   done
+  killall audioserver
 fi
-
-# restart
-killall audioserver
-
-# stop
-NAME=dms-hal-2-0
-if getprop | grep "init.svc.$NAME\]: \[running"; then
-  stop $NAME
-fi
-
-# function
-run_service() {
-if getprop | grep "init.svc.$NAME\]: \[stopped"; then
-  start $NAME
-fi
-PID=`pidof $FILE`
-if [ ! "$PID" ]; then
-  $FILE &
-fi
-PID=`pidof $FILE`
-resetprop init.svc.$NAME running
-resetprop init.svc_debug_pid.$NAME "$PID"
-}
 
 # run
 NAME=dms-hal-1-0
-FILE=/vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
+SERV=vendor.dolby.hardware.dms@1.0-service
+FILE=/vendor/bin/hw/$SERV
 run_service
 
 # wait
 sleep 40
 
-# oom
+# allow
+PKG=com.dolby.daxappui
+if [ "$API" -ge 30 ]; then
+  appops set $PKG AUTO_REVOKE_PERMISSIONS_IF_UNUSED ignore
+fi
+
+# allow
 PKG=com.dolby.daxservice
+if [ "$API" -ge 30 ]; then
+  appops set $PKG AUTO_REVOKE_PERMISSIONS_IF_UNUSED ignore
+fi
 PID=`pidof $PKG`
 if [ $PID ]; then
   echo -17 > /proc/$PID/oom_adj
