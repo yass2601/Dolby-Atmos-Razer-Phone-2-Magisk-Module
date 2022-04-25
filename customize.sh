@@ -143,6 +143,11 @@ FILE=/data/adb/modules/$NAME/module.prop
 if grep -Eq 'Dolby Atmos Xperia' $FILE; then
   conflict
 fi
+NAME=MiSound
+FILE=/data/adb/modules/$NAME/module.prop
+if grep -Eq 'Mi Sound and Dolby Atmos' $FILE; then
+  conflict
+fi
 
 # function
 cleanup() {
@@ -548,17 +553,17 @@ fi
 
 # hide
 hide_oat
-APP="MusicFX MotoDolbyV3 OPSoundTuner DolbyAtmos"
+APP="MusicFX MotoDolbyDax3 MotoDolbyV3 OPSoundTuner DolbyAtmos"
 for APPS in $APP; do
   hide_app
 done
-if getprop | grep -Eq "disable.dirac\]: \[1" || getprop | grep -Eq "disable.misoundfx\]: \[1"; then
+if ! getprop | grep -Eq "disable.dirac\]: \[0" && ! getprop | grep -Eq "disable.misoundfx\]: \[0"; then
   APP=MiSound
   for APPS in $APP; do
     hide_app
   done
 fi
-if getprop | grep -Eq "disable.dirac\]: \[1"; then
+if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
   APP=DiracAudioControlService
   for APPS in $APP; do
     hide_app
@@ -574,7 +579,7 @@ APP="XiaomiParts
      KharaMeParts"
 NAME='dirac soundfx'
 UUID=e069d9e0-8329-11df-9168-0002a5d5c51b
-if getprop | grep -Eq "disable.dirac\]: \[1"; then
+if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
   ui_print "- $NAME will be disabled"
   sed -i 's/#2//g' $FILE
   check_app
@@ -587,7 +592,7 @@ fi
 FILE=$MODPATH/.aml.sh
 NAME=misoundfx
 UUID=5b8e36a5-144a-4c38-b1d7-0002a5d5c51b
-if getprop | grep -Eq "disable.misoundfx\]: \[1"; then
+if ! getprop | grep -Eq "disable.misoundfx\]: \[0"; then
   ui_print "- $NAME will be disabled"
   sed -i 's/#3//g' $FILE
   check_app
@@ -600,7 +605,7 @@ fi
 FILE=$MODPATH/.aml.sh
 NAME='dirac_controller soundfx'
 UUID=b437f4de-da28-449b-9673-667f8b964304
-if getprop | grep -Eq "disable.dirac\]: \[1"; then
+if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
   ui_print "- $NAME will be disabled"
   ui_print " "
 else
@@ -611,7 +616,7 @@ fi
 FILE=$MODPATH/.aml.sh
 NAME='dirac_music soundfx'
 UUID=b437f4de-da28-449b-9673-667f8b9643fe
-if getprop | grep -Eq "disable.dirac\]: \[1"; then
+if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
   ui_print "- $NAME will be disabled"
   ui_print " "
 else
@@ -622,7 +627,7 @@ fi
 FILE=$MODPATH/.aml.sh
 NAME='dirac_gef soundfx'
 UUID=3799D6D1-22C5-43C3-B3EC-D664CF8D2F0D
-if getprop | grep -Eq "disable.dirac\]: \[1"; then
+if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
   ui_print "- $NAME will be disabled"
   ui_print " "
 else
@@ -739,13 +744,13 @@ for NAMES in $NAME; do
   fi
   if [ -f $FILE64 ]; then
     ui_print "- Detected"
-    ui_print "  $FILE64"
+    ui_print "$FILE64"
     rm -f $MODPATH/system/vendor/lib64/$NAMES
     ui_print " "
   fi
   if [ -f $FILE ]; then
     ui_print "- Detected"
-    ui_print "  $FILE"
+    ui_print "$FILE"
     rm -f $MODPATH/system/vendor/lib/$NAMES
     ui_print " "
   fi

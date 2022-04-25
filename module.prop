@@ -1,10 +1,10 @@
 id=DolbyAtmos
 name=Dolby Atmos Razer Phone 2
-version=v5.5
-versionCode=45
+version=v5.7
+versionCode=47
 author=Rei Ryuki the Fixer
-description=An equalizer ported from Razer Phone 2 for any Android 9 and up, 64 bit architecture.
-#Source: https://dumps.tadiphone.dev/dumps/razer/bolt bolt-user-9-P-SMR1-RC008-ATT-190626-3239-release-keys
-#VQE soundfx source: LENOVO TB-J606F
+description=An equalizer soundfx ported from Razer Phone 2 for any Android 9 and up, 64 bit architecture.
+# Source: https://dumps.tadiphone.dev/dumps/razer/bolt bolt-user-9-P-SMR1-RC008-ATT-190626-3239-release-keys
+# VQE soundfx source: LENOVO TB-J606F
 
 
