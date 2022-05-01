@@ -1,6 +1,3 @@
-(
-
-mount /data
 mount -o rw,remount /data
 MODPATH=${0%/*}
 AML=/data/adb/modules/aml
@@ -149,7 +146,5 @@ if ! grep -A2 vendor.dolby.hardware.dms $FILE | grep 1.0; then
     killall hwservicemanager
   fi
 fi
-
-) 2>/dev/null
 
 
