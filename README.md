@@ -3,7 +3,7 @@
 ## Descriptions
 - An EQ ported from Razer Phone 2 (bolt)
 - Global type soundfx
-- Spoofing ro.product.model/brand/device/manufacturer, may break some platform apps and features.
+- Changes ro.product.model, ro.product.brand, ro.product.device, & ro.profuct.manufacturer system property. It may break some platform apps and features.
 
 ## Screenshots
 - https://t.me/androidryukimodsdiscussions/66464
