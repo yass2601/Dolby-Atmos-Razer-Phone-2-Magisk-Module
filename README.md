@@ -13,6 +13,9 @@
 - 64 bit architecture
 - Magisk installed
 
+## WARNING!!!
+- Possibility of bootloop or even softbrick or a service failure on Read-Only ROM.
+
 ## Installation Guide
 - Remove any other Dolby module with different name (no need to remove if it's the same name)
 - Reboot
