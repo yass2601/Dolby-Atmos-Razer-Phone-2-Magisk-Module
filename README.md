@@ -4,6 +4,7 @@
 - An EQ ported from Razer Phone 2 (bolt)
 - Global type soundfx
 - Changes ro.product.model, ro.product.brand, ro.product.device, & ro.product.manufacturer system property. It may break some platform apps and features.
+- Sources: https://github.com/reiryuki/Dolby-Atmos-Razer-Phone-2-Magisk-Module/blob/main/module.prop
 
 ## Screenshots
 - https://t.me/androidryukimodsdiscussions/66464
