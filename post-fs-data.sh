@@ -128,13 +128,15 @@ if [ -f $FILE ]; then
 fi
 
 # patch manifest
-NAME=manifest.xml
-M=$ETC/vintf/$NAME
-MODM=$MODETC/vintf/$NAME
+M=$ETC/vintf/manifest.xml
+MODM=$MODETC/vintf/manifest.xml
 rm -f $MODM
-FILE=`find $MAGISKTMP/mirror/*/etc/vintf\
-           $MAGISKTMP/mirror/*/*/etc/vintf\
-           /*/etc/vintf /*/*/etc/vintf -type f -name *.xml`
+FILE="$MAGISKTMP/mirror/*/etc/vintf/manifest.xml
+      $MAGISKTMP/mirror/*/*/etc/vintf/manifest.xml
+      /*/etc/vintf/manifest.xml /*/*/etc/vintf/manifest.xml
+      $MAGISKTMP/mirror/*/etc/vintf/manifest/*.xml
+      $MAGISKTMP/mirror/*/*/etc/vintf/manifest/*.xml
+      /*/etc/vintf/manifest/*.xml /*/*/etc/vintf/manifest/*.xml"
 if ! grep -A2 vendor.dolby.hardware.dms $FILE | grep 1.0; then
   cp -f $M $MODM
   if [ -f $MODM ]; then
@@ -149,7 +151,7 @@ if ! grep -A2 vendor.dolby.hardware.dms $FILE | grep 1.0; then
         </interface>\
         <fqname>@1.0::IDms/default</fqname>\
     </hal>' $MODM
-    mount -o bind $MODM /system/etc/vintf/$NAME
+    mount -o bind $MODM /system/etc/vintf/manifest.xml
     killall hwservicemanager
   fi
 fi

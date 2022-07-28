@@ -335,9 +335,12 @@ find_file
 rm -rf $MODPATH/system_support
 
 # patch manifest.xml
-FILE=`find $MAGISKTMP/mirror/*/etc/vintf\
-           $MAGISKTMP/mirror/*/*/etc/vintf\
-           /*/etc/vintf /*/*/etc/vintf -type f -name *.xml`
+FILE="$MAGISKTMP/mirror/*/etc/vintf/manifest.xml
+      $MAGISKTMP/mirror/*/*/etc/vintf/manifest.xml
+      /*/etc/vintf/manifest.xml /*/*/etc/vintf/manifest.xml
+      $MAGISKTMP/mirror/*/etc/vintf/manifest/*.xml
+      $MAGISKTMP/mirror/*/*/etc/vintf/manifest/*.xml
+      /*/etc/vintf/manifest/*.xml /*/*/etc/vintf/manifest/*.xml"
 if [ "`grep_prop dolby.skip.vendor $OPTIONALS`" != 1 ]\
 && ! grep -A2 vendor.dolby.hardware.dms $FILE | grep -Eq 1.0; then
   FILE=$MAGISKTMP/mirror/vendor/etc/vintf/manifest.xml
@@ -369,18 +372,9 @@ if [ "`grep_prop dolby.skip.system_ext $OPTIONALS`" != 1 ]\
   patch_manifest
 fi
 if ! grep -A2 vendor.dolby.hardware.dms $FILE | grep -Eq 1.0; then
-  FILE=`find $MAGISKTMP/mirror/system\
-             $MAGISKTMP/mirror/system_ext\
-             $MAGISKTMP/mirror/vendor\
-             $MAGISKTMP/mirror/system_root/system\
-             $MAGISKTMP/mirror/system_root/system_ext\
-             $MAGISKTMP/mirror/system_root/vendor\
-             /system\
-             /system_ext\
-             /vendor\
-             /system_root/system\
-             /system_root/system_ext\
-             /system_root/vendor -type f -name manifest.xml`
+  FILE="$MAGISKTMP/mirror/*/etc/vintf/manifest.xml
+        $MAGISKTMP/mirror/*/*/etc/vintf/manifest.xml
+        /*/etc/vintf/manifest.xml /*/*/etc/vintf/manifest.xml"
   restore
   ui_print "- Using systemless manifest.xml patch."
   ui_print "  On some ROMs, it's buggy or even makes bootloop"
@@ -780,7 +774,7 @@ for NAMES in $NAME; do
   FILE64_2=/odm/lib64/$NAMES
   FILE_2=/odm/lib/$NAMES
   if [ -f $FILE64 ] || [ -f $FILE64_2 ]; then
-    ui_print "- Detected $NAMES"
+    ui_print "- Detected $NAMES 64 bit"
     rm -f $MODPATH/system/vendor/lib64/$NAMES
     ui_print " "
   fi
